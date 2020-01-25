@@ -19,7 +19,7 @@ jobs:
         fpco/stack-build-small:latest /bin/bash -c \
         "chmod 777 /srv/hakyll && \
          cd /srv/hakyll && \
-         stack install --allow-different-user && \
+         stack init && \
          stack build --allow-different-user --fast && \
          stack exec site build"
     - name: list artifacts
