@@ -22,3 +22,5 @@ jobs:
          stack install --allow-different-user && \
          stack build --allow-different-user --fast && \
          stack exec site build"
+    - name: list artifacts
+      run: find ${{ github.workspace }}/_site
