@@ -12,3 +12,6 @@ this workflow uses [fpco/stack-build-small](fpco/stack-build-small) Docker image
     - you can copy this whole repository and edit contents, if you will create a new hakyll-site.
 1. add your deploy task after the `list artifacts` step.
 
+## misc
+
+if your repository doesn't contain `stack.yaml`, use [`no-stack.yaml` branch](../../tree/no-stack.yaml).
