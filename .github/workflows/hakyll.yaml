@@ -14,5 +14,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Hakyll build workflow
-      uses: zfhrp6/hakyll-build-action@v0.1.4
+      uses: zfhrp6/hakyll-build-action@v0.1.5
 
