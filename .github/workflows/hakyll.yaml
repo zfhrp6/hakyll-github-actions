@@ -16,7 +16,7 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/hakyll -v ${{ github.workspace }}/_site:/srv/hakyll/_site \
-        fpco/stack-build:latest /bin/bash -c \
+        fpco/stack-build-small:latest /bin/bash -c \
         "chmod 777 /srv/hakyll && \
          cd /srv/hakyll && \
          stack install --allow-different-user && \
