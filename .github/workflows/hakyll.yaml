@@ -1,0 +1,19 @@
+name: hakyll CI
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build the site in the stack container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/hakyll -v ${{ github.workspace }}/_site:/srv/hakyll/_site \
+        fpco/stack-build:latest /bin/bash -c "chmod 777 /srv/hakyll && cd /srv/hakyll && stack build --allow-different-user"
